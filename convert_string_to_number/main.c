@@ -16,7 +16,6 @@ Examples
 #include <string.h>
 #include <stddef.h>
 
-
 int string_to_number(const char *src);
 
 int main()
@@ -27,29 +26,28 @@ int main()
     printf("%d\n", string_to_number("-23872"));
     printf("%d\n", string_to_number("0"));
     printf("%d\n", string_to_number(""));
-    
+
     return 0;
 }
 
-
 int string_to_number(const char *src)
 {
-  if (!src || !src[0])
-    return 0;
-  
-  int k = 1;
-  int num = 0;
-  
-  for (size_t i = strlen(src) - 1; i != 0; i--)
-  {
-    num += (src[i] - '0') * k;
-    k *= 10;
-  }
-    
-  if (src[0] == '-')
-    num = -num;
-  else
-    num += (src[0] - '0') * k;
-  
-  return num;
+    if (!src || !src[0])
+        return 0;
+
+    int k = 1;
+    int num = 0;
+
+    for (size_t i = strlen(src) - 1; i != 0; i--)
+    {
+        num += (src[i] - '0') * k;
+        k *= 10;
+    }
+
+    if (src[0] == '-')
+        num = -num;
+    else
+        num += (src[0] - '0') * k;
+
+    return num;
 }
