@@ -1,1 +1,1 @@
-# C_codewars
+1) sentence_smash
