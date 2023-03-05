@@ -1,1 +1,1 @@
-1) sentence_smash
+c language coding practice
