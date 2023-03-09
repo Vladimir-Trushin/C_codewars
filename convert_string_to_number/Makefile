@@ -1,5 +1,10 @@
-all:
+all: main.c
 	gcc main.c -o main
 
+execute:
+	@./main
+
 clean:
-	rm main
+	@rm -f main
+
+.PHONY: all execute clean 
